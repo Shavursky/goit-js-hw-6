@@ -8,8 +8,10 @@ const ingredients = [
 ];
 
 let colorElem = document.querySelector('#ingredients');
-ingredients.forEach(ingrEl => { 
+
+const arrItem = ingredients.map(ingrEl => { 
   let newItem = document.createElement('li');
   newItem.textContent = ingrEl;
-  colorElem.appendChild(newItem);  
+  return newItem;    
 })
+colorElem.append(...arrItem);

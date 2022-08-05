@@ -5,9 +5,10 @@ input.addEventListener('blur', numData);
 function numData (event) {
     const el = event.currentTarget;
 
-    if (Number(el.dataset.length) === el.value.length) {        
-        return el.classList.add('valid');
+    if (Number(el.dataset.length) === el.value.length) {           
+        el.classList.remove('invalid');
+       return el.classList.add('valid'); 
     }         
         el.classList.remove('valid')
-        return el.classList.add('invalid');        
+        el.classList.add('invalid');        
 }
